@@ -1,0 +1,22 @@
+<div class=" selectbox m-4">
+    <ng-select class="custom" [items]="currentusers" bindLabel="name"></ng-select>
+</div>
+<div class="container-fluid">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of currentusers">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

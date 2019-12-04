@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <h1>LOGIN</h1>
+    <div class="form">
+         
+        <div class="form-group">
+            <label>*User Name</label><br>
+            <input type="text"  placeholder="Enter"  [(ngModel)]="username" />
+        </div> 
+        <div class="form-group">
+            <label>*Email</label><br>
+            <input type="text" placeholder="Enter" />
+        </div>
+       <div class="form-group">
+           <label>*Password</label><br>
+           <input type="password" placeholder="Enter" [(ngModel)]="password" />
+       </div>
+       <div class="form-group" style="padding-top: 30px;">
+           <a>Forget Password</a>
+       </div>
+      
+      <div class="form-group">
+      <input type="submit" value="SUBMIT" (click)="submit()">&nbsp;
+      <input type="submit" value="CANCEL" (click)="cancel()">
+      </div>
+    </div>
+      
+    </div>
+
+</div>

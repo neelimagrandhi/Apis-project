@@ -1,0 +1,33 @@
+<div class=" selectbox m-4">
+    <ng-select class="custom" [items]="currentusers" bindLabel="id"></ng-select>
+</div>
+<div class="container-fluid">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of currentusers">
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.email}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<accordion [closeOthers]="oneAtATime">
+        <accordion-group heading="Header">
+          This content is straight in the template.
+        </accordion-group>
+        <accordion-group heading="Content 1">
+          <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="Content 2">
+          <p>Content 2</p>
+        </accordion-group>
+</accordion>

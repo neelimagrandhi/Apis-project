@@ -1,0 +1,24 @@
+
+<div class=" selectbox m-5">
+    <ng-select class="custom" [items]=currentusers bindLabel="name" bindValue="id"  (change)="changedata($event)"></ng-select>
+</div>
+<div class="container-fluid">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of currentusers">
+            <td><a href="#/useredit/{{data.id}}">{{data.id}}</a></td>
+            <td popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">{{data.name}}</td>
+            <td >{{data.email}}</td>
+            <td><button class="btn btn-success" (click)="gotoedit(data.id)">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+
